@@ -1,0 +1,58 @@
+{
+  "name": "cra-boost",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:dev": "vite build --mode development",
+    "serve:dev": "vite preview --mode development",
+    "build:staging": "vite build --mode staging",
+    "serve:staging": "vite preview --mode staging",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --ignore-path .gitignore  \"./*.+(js|json)\" \"src/**/*.+(js|jsx)\" --write",
+    "preview": "vite preview",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "5.40.1",
+    "@types/prop-types": "15.7.12",
+    "@welldone-software/why-did-you-render": "8.0.1",
+    "axios": "^1.7.2",
+    "localforage": "1.10.0",
+    "lodash": "4.17.21",
+    "match-sorter": "6.3.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.51.5",
+    "react-router-dom": "6.23.1",
+    "sort-by": "1.2.0"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "4.2.1",
+    "@types/react": "18.2.66",
+    "@types/react-dom": "18.2.22",
+    "@vitejs/plugin-react": "4.2.1",
+    "autoprefixer": "^10.4.19",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-react": "7.34.1",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-react-refresh": "0.4.6",
+    "lint-staged": "15.2.5",
+    "postcss": "^8.4.38",
+    "prettier": "3.3.1",
+    "prettier-plugin-sort-json": "4.0.0",
+    "tailwindcss": "^3.4.3",
+    "vite": "5.2.0",
+    "husky": "^8.0.0"
+  },
+  "lint-staged": {
+    "./src/**/*.{ts,js,jsx,tsx}": [
+      "eslint --ignore-path .gitignore --fix",
+      "prettier --ignore-path .gitignore --write"
+    ]
+  }
+}

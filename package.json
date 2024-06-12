@@ -1,7 +1,15 @@
 {
   "name": "cra-boost",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "A starter project for React.js bootstrapped with Vite that includes all you need to build amazing projects",
+  "author": "Muskaan Aggarwal (@aggarwal-muskaan)",
+  "keywords": [
+    "reactjs",
+    "javascript",
+    "vite",
+    "starter"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,8 +21,7 @@
     "serve": "vite preview",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --ignore-path .gitignore  \"./*.+(js|json)\" \"src/**/*.+(js|jsx)\" --write",
-    "preview": "vite preview",
-    "prepare": "husky install"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@tanstack/react-query": "5.40.1",

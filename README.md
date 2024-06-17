@@ -1,8 +1,83 @@
-# React + Vite
+<p align="center">
+![npm-cra-boost](https://github.com/aggarwal-muskaan/cra-boost/assets/54470292/1c699f59-16b9-4fc5-84f3-d802ee110d3e)
+</p>
+
+<br />
+
+<div align="center"><strong>A starter for React project</strong></div>
+<div align="center">Provides a good developer experience, and boosts productivity. All the tools you need to build your next project.</div>
+
+<br />
+
+## Features
+
+- ⚛️ React 18
+- 📏 ESLint — To find and fix problems in your code
+- 💖 Prettier — Code Formatter for consistent style
+- 🐶 Husky — For running scripts before committing
+- 🖌 Renovate — To keep your dependencies up to date
+- 🚫 lint-staged — Run ESLint and Prettier against staged Git files
+- ⚙️ EditorConfig - Consistent coding styles across editors and IDEs
+- 🗂 Path Mapping — Import components or images using the `@` prefix
+- 🚓 Axios - Interceptor configured
+- 🐫 Lodash - cameliseCase() to convert any key of any data type into camel case
+- ⛑ Tanstack Query - QueryClient instance with overridden default options
+
+Please read <a href='https://medium.com/@aggarwal-muskaan/boost-productivity-in-a-react-project-a299a267c482'>Medium Blog</a> for more
+
+## Quick Start
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+The best way to start with this template is using [degit](https://www.npmjs.com/package/degit?activeTab=readme#wait-isnt-this-just-git-clone---depth-1-).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+npx degit https://github.com/aggarwal-muskaan/cra-boost your-project-name
+cd your-project-name
+npm install
+```
+
+### Development
+
+To start the project locally, run:
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:5173` with your browser to see the result.
+
+## Documentation
+
+### Requirements
+
+- Node.js >= 16
+- npm 8
+
+### Directory Structure
+
+- [`.husky`](.husky) — Husky configuration and hooks.<br>
+- [`public`](./public) — Static assets such as robots.txt, and favicon.<br>
+- [`src`](./src) — Application source code, including components, lib, utilities, and styles.
+
+### Scripts
+
+- `npm run dev` — Starts the application in development mode at `http://localhost:5173`.
+- `npm run build:dev` — Creates an optimized build of your application using `.env` file.
+- `npm serve:dev` — Starts the application in development mode with `NODE_ENV = production`.
+- `npm build` - Creates an optimized build of your application using `.env.production` file
+- `npm serve` — Starts the application in production mode with `NODE_ENV = production`.
+- `npm lint` — Runs ESLint for all files in the `src` directory.
+- `npm run format` — Runs Prettier for all files in the directory including `json` config files.
+- `npm run preview` - Previewing the build locally.
+
+### Path Mapping
+
+To import components or files, use the `@` prefix.
+
+```jsx
+import { MyButton } from '@/components/MyButton';
+// js files
+import { HttpErrorResponse } from '@/constants/HTTPErrorResponse';
+import { getQueryClientInstance } from '@/lib/queryClient';
+```
